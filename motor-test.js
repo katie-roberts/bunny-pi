@@ -1,5 +1,9 @@
-var five = require("johnny-five"),
-  board = new five.Board();
+const five = require("johnny-five"),
+	raspi = require('raspi-io');
+
+const board = new five.Board({ 
+       io: new raspi()
+});
 
 board.on("ready", function() {
   var leftEar;
