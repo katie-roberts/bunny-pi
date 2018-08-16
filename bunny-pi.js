@@ -13,7 +13,7 @@ const app = express ();
 const jsonParser = bodyParser.json();
 
 app.post('/bunny-commands', jsonParser, function (request, response) {
-  console.log("howdy :: ", request);
+  console.log("howdy :: ", request.body);
 })
 
 app.listen(3000);
