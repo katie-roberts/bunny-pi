@@ -111,14 +111,14 @@ board.on("ready", function() {
         led2.stop().off();
         led3.stop().off();
     },
-    buildComplete: => {
+    buildComplete: () => {
       leftEar.stop();
       rightEar.stop();
       led.stop().on();
       led2.stop().on();
       led3.stop().on();
     },
-    buildFail: => {
+    buildFail: () => {
       leftEar.reverse(154);
       rightEar.forward(101);
       led.stop().off();
