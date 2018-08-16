@@ -1,10 +1,19 @@
 
 const five = require("johnny-five"),
-	raspi = require("raspi-io");
+	raspi = require("raspi-io"),
+  express = require("express");
 
 const board = new five.Board({
        io: new raspi()
 });
+
+const app = express ();
+
+app.post('/bunny-commands', function request, response {
+  console.log("howdy")
+})
+
+app.listen(3000);
 
 board.on("ready", function() {
   var leftEar;
