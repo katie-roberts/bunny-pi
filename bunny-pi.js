@@ -9,7 +9,7 @@ const board = new five.Board({
 
 const app = express ();
 
-app.post('/bunny-commands', function (request, response) {
+app.get('/bunny-commands', function (request, response) {
   console.log("howdy")
 })
 
