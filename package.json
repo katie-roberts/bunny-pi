@@ -1,0 +1,25 @@
+{
+  "name": "bunny-pi",
+  "version": "1.0.0",
+  "description": "## Installation instructions",
+  "main": "bunny-pi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katie-roberts/bunny-pi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katie-roberts/bunny-pi/issues"
+  },
+  "homepage": "https://github.com/katie-roberts/bunny-pi#readme",
+  "dependencies": {
+    "j5-songs": "0.0.9",
+    "johnny-five": "^0.9.60",
+    "node-env-file": "^0.1.8",
+    "request": "^2.74.0"
+  }
+}
