@@ -120,13 +120,23 @@ board.on("ready", function() {
     },
     buildFail: () => {
       leftEar.reverse(154);
-      rightEar.forward(101);
+    //  rightEar.forward(101);
       led.stop().off();
       led.blink(500);
       led2.stop().off();
       led2.blink(500);
       led3.stop().off();
       led3.blink(500);
+    },
+    buildUnstable: () => {
+      leftEar.reverse(50);
+      rightEar.reverse(50);
+      led.stop().off();
+      led.blink(1000);
+      led2.stop().off();
+      led2.blink(1000);
+      led3.stop().off();
+      led3.blink(1000);
     }
   })
 
