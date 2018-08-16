@@ -9,6 +9,14 @@ const board = new five.Board({
 board.on("ready", function() {
   var leftEar;
   var rightEar;
+
+  const led = new five.Led('P1-15');
+  const led2 = new five.Led('P1-16');
+  const led3 = new five.Led('P1-13');
+  led.on();
+  led2.on();
+  led3.on();
+
 	leftEar = new five.Motor({
 	pins: {
 		pwm: 7,
@@ -99,6 +107,12 @@ board.on("ready", function() {
     buildStart: () => {
         leftEar.forward(255);
         rightEar.forward(255);
+        led.stop().off();
+        led.blink(500);
+        led2.stop().off();
+        led2.blink(500);
+        led3.stop().off();
+        led3.blink(500);
     }
   })
 
