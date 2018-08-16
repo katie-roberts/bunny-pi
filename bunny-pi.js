@@ -2,7 +2,7 @@
 const five = require("johnny-five"),
 	raspi = require("raspi-io"),
   express = require("express"),
-  parser = require("body-parser");
+  bodyParser = require("body-parser");
 
 const board = new five.Board({
        io: new raspi()
