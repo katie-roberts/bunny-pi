@@ -7,8 +7,8 @@ const board = new five.Board({
 });
 
 board.on('ready', function() {
-  const leftEar;
-  const rightEar;
+  var leftEar;
+  var rightEar;
 	leftEar = new five.Motor({
 	pins: {
 		pwm: 7,
