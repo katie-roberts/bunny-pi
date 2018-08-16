@@ -29,5 +29,5 @@ I've been working on the Bunny since then.  It is slow going but i am achieving.
 * Adifruit Hat
 * Johnnie 5 
 
-I have also done a soldering practice kit (something like this https://www.maplin.co.uk/p/velleman-led-running-lights-solder-kit-vx96e) and listened to my husband when he trys to teams me to not use too much solder and "let it flow".
+I have also done a soldering practice kit (something like this https://www.maplin.co.uk/p/velleman-led-running-lights-solder-kit-vx96e) and listened to my husband when he trys to teach me to not use too much solder and "let it flow".
 
