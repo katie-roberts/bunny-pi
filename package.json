@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/katie-roberts/bunny-pi#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "j5-songs": "0.0.9",
     "johnny-five": "^0.9.60",
     "node-env-file": "^0.1.8",
