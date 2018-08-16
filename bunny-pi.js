@@ -106,13 +106,27 @@ board.on("ready", function() {
   this.repl.inject({
     buildStart: () => {
         leftEar.forward(255);
-        rightEar.forward(255);
+        rightEar.forward(245);
         led.stop().off();
-        led.blink(500);
         led2.stop().off();
-        led2.blink(500);
         led3.stop().off();
-        led3.blink(500);
+    },
+    buildComplete: => {
+      leftEar.stop();
+      rightEar.stop();
+      led.stop().on();
+      led2.stop().on();
+      led3.stop().on();
+    },
+    buildFail: => {
+      leftEar.reverse(154);
+      rightEar.forward(101);
+      led.stop().off();
+      led.blink(500);
+      led2.stop().off();
+      led2.blink(500);
+      led3.stop().off();
+      led3.blink(500);
     }
   })
 
