@@ -92,8 +92,16 @@ board.on("ready", function() {
   rightEar.disable();
 
   // set the motor going forward full speed (nothing happen)
-  leftEar.forward(255);
-  rightEar.forward(255);
+//  leftEar.forward(255);
+//  rightEar.forward(255);
+
+  this.repl.inject({
+    buildStart: () => {
+        leftEar.forward(255);
+        rightEar.forward(255);
+    }
+  })
+
 
    this.on('exit', function() {
       leftEar.stop();
