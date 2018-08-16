@@ -43,12 +43,10 @@ board.on("ready", function() {
 	});
 
 	leftEar.on("stop", function() {
-   		 console.log("automated stop on timer", Date.now());
+//   		 console.log("automated stop on timer", Date.now());
   	});
 
   	leftEar.on("forward", function() {
-    		console.log("forward", Date.now());
-
     // enable the motor after 2 seconds
     board.wait(2000, function() {
       leftEar.enable();
@@ -56,8 +54,6 @@ board.on("ready", function() {
   });
 
   leftEar.on("enable", function() {
-    console.log("motor enabled", Date.now());
-
     // enable the motor after 2 seconds
     board.wait(2000, function() {
       leftEar.stop();
@@ -65,7 +61,7 @@ board.on("ready", function() {
   });
 
   leftEar.on("disable", function() {
-    console.log("motor disabled", Date.now());
+//    console.log("motor disabled", Date.now());
   });
 
 
@@ -74,8 +70,6 @@ board.on("ready", function() {
   });
 
   rightEar.on("forward", function() {
-    console.log("forward", Date.now());
-
     // enable the motor after 2 seconds
     board.wait(2000, function() {
       rightEar.enable();
@@ -83,8 +77,6 @@ board.on("ready", function() {
   });
 
   rightEar.on("enable", function() {
-    console.log("motor enabled", Date.now());
-
     // enable the motor after 2 seconds
     board.wait(2000, function() {
       rightEar.stop();
@@ -120,7 +112,7 @@ board.on("ready", function() {
     },
     buildFail: () => {
       leftEar.reverse(154);
-    //  rightEar.forward(101);
+      rightEar.stop();
       led.stop().off();
       led.blink(500);
       led2.stop().off();
