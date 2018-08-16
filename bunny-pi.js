@@ -1,7 +1,8 @@
 
 const five = require("johnny-five"),
 	raspi = require("raspi-io"),
-  express = require("express");
+  express = require("express"),
+  parser = require("body-parser");
 
 const board = new five.Board({
        io: new raspi()
@@ -9,8 +10,10 @@ const board = new five.Board({
 
 const app = express ();
 
-app.get('/bunny-commands', function (request, response) {
-  console.log("howdy")
+const jsonParser = bodyParser.json();
+
+app.post('/bunny-commands', jsonParser, function (request, response) {
+  console.log("howdy :: ", request);
 })
 
 app.listen(3000);
