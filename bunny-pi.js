@@ -94,4 +94,9 @@ board.on("ready", function() {
   // set the motor going forward full speed (nothing happen)
   leftEar.forward(255);
   rightEar.forward(255);
+
+   this.on('exit', function() {
+      leftEar.stop();
+      rightEar.stop();
+   });
 });
